@@ -7,6 +7,8 @@ import { SearchTableComponent } from './search-table/search-table.component';
 import { TrimPipe } from './trim.pipe';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchPageComponent } from './search-page/search-page.component';
+import { DefinitionCardComponent } from './definition-card/definition-card.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SearchTableComponent,
     TrimPipe,
     SearchbarComponent,
+    SearchPageComponent,
+    DefinitionCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

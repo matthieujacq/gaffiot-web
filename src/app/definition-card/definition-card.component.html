@@ -1,0 +1,5 @@
+<button class="back" routerLink="/">Search</button>
+<ng-container *ngIf="definition$ | async as definition">
+  <h2>{{ definition.latin | trim : "," }}</h2>
+  <p>{{ definition.french }}</p>
+</ng-container>
