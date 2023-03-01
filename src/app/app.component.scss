@@ -1,0 +1,21 @@
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 1rem 0;
+  // vibrant steelblue
+  color: #3c6382;
+}
+main {
+  width: clamp(300px, 90%, 700px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1em;
+  // border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}

@@ -2,6 +2,8 @@
 :root {
   font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 1.5;
+  --text-color: #143b5a;
+  color: var(--text-color);
 }
 
 // styles for the sanitzed html
@@ -66,7 +68,6 @@
   }
 
   .main-def {
-    color: navy;
     font-weight: bold;
   }
 
@@ -82,12 +83,15 @@
     border-radius: 5px;
     margin: 1.5em 2em;
     box-shadow: 0 0 5px #ccc;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
 
 .navigation button,
 button.search {
   background: #fff;
+  color: var(--text-color);
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0.5em 1em;
