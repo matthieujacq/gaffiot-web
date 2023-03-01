@@ -1,0 +1,14 @@
+.definition-card {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-block: 1em;
+}

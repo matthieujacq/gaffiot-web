@@ -16,6 +16,8 @@ export class DefinitionCardComponent {
 
   definition$ = this.wordId.pipe(
     map((id) => this.data[id]),
+    // copy the object to avoid modifying the original
+    map((definition) => ({ ...definition })),
     tap((definition) => {
       // Replace \tag{...} with <tag>...</tag>
       definition.french = definition.french.replace(
@@ -33,6 +35,11 @@ export class DefinitionCardComponent {
       definition.french = definition.french.replace(
         /\[([^\]]+)\]/g,
         '<span class="comment">$1</span>'
+      );
+      // enclose defintions between 2 <pp>
+      definition.french = definition.french.replace(
+        /(<pp>(?:.|[\r\n])*?)(?=<pp>|<rub>|$)/g,
+        '<div class="definition-pp">$1</div>'
       );
     })
   );

@@ -1,21 +1,26 @@
-<button class="back" routerLink="/">Search</button>
-<div class="navigation">
-  <button
-    class="previous"
-    *ngIf="prev$ | async as previous"
-    [routerLink]="['/definition', previous.id]"
-  >
-    &lt; {{ previous.latin | trim : "," }}
-  </button>
-  <button
-    class="next"
-    *ngIf="next$ | async as next"
-    [routerLink]="['/definition', next.id]"
-  >
-    {{ next.latin | trim : "," }} &gt;
-  </button>
-</div>
 <div class="definition-card" *ngIf="definition$ | async as definition">
-  <span class="entry">{{ definition.latin | trim : "," }}</span>
-  <span class="definition" [innerHTML]="definition.french | sanitize"></span>
+  <button class="search" routerLink="/">Back to search</button>
+  <div class="navigation">
+    <button
+      class="previous"
+      *ngIf="prev$ | async as previous"
+      [routerLink]="['/definition', previous.id]"
+    >
+      &lt; {{ previous.latin | trim : "," }}
+    </button>
+    <button
+      class="next"
+      *ngIf="next$ | async as next"
+      [routerLink]="['/definition', next.id]"
+    >
+      {{ next.latin | trim : "," }} &gt;
+    </button>
+  </div>
+  <div class="definition">
+    <span class="entry">{{ definition.latin | trim : "," }}</span>
+    <span
+      class="definition-body"
+      [innerHTML]="definition.french | sanitize"
+    ></span>
+  </div>
 </div>

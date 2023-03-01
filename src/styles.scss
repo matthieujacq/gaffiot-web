@@ -26,10 +26,9 @@
   // P1, P2, etc.
   pp {
     &::before {
-      content: "\A\A¶ "; // \A is a new-line
+      content: "¶ "; // \A is a new-line
     }
     color: red;
-    white-space: pre; // meeded so to insert the new-line before
     font-weight: bold;
   }
 
@@ -77,4 +76,27 @@
     color: brown;
     font-style: italic;
   }
+
+  .definition-pp {
+    padding: 1em;
+    border-radius: 5px;
+    margin: 1.5em 2em;
+    box-shadow: 0 0 5px #ccc;
+  }
+}
+
+.navigation button,
+button.search {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: #eee;
+  }
+}
+button.search {
+  padding: 1em 3em;
 }
