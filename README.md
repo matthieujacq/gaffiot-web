@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
+## Deploy
+
+Deploy on github pages with `ng deploy`, we currently use the custom domain [gaffiot.codeofsteel.com](gaffiot.codeofsteel.com) using [angular-cli-ghpages](angular-schule/angular-cli-ghpages). See [instructions](https://angular.schule/blog/2020-01-everything-github).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
