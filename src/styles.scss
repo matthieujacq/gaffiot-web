@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  --font-family: Georgia, "Times New Roman", Times, serif;
+  --font-family-sans: system-ui, "Roboto", "Open Sans", sans-serif;
   line-height: 1.5;
+  font-family: var(--font-family);
   --text-color: #143b5a;
   --primary-color: #0080ff;
+  --primary-color-light: #e6f2ff;
   color: var(--text-color);
 }
 
@@ -84,7 +87,7 @@ body {
   cl,
   lat,
   latv {
-    color: brown;
+    color: #653a11;
     font-style: italic;
   }
 
