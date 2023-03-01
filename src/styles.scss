@@ -121,3 +121,11 @@ button.search {
 * {
   box-sizing: border-box;
 }
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

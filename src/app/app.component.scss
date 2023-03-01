@@ -13,6 +13,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 main {
@@ -29,4 +30,21 @@ main {
   background-color: #fff;
   height: clamp(300px, calc(100% - 7em), 100%);
   overflow: auto;
+}
+
+footer {
+  // height: 1em;
+  margin: 0.5em 1.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #777;
+  a {
+    color: #777;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
