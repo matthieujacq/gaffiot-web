@@ -1,9 +1,20 @@
 <table>
   <tbody>
-    <tr *ngFor="let item of filteredData$ | async | slice : 0 : 20">
-      <td>
-        <button>{{ item.latin | trim : "," }}</button>
-      </td>
-    </tr>
+    <ng-container *ngIf="filteredData$ | async as filteredData">
+      <ng-container *ngIf="filteredData.length > 0; else noResults">
+        <tr *ngFor="let item of filteredData | slice : 0 : 20">
+          <td>
+            <button>{{ item.latin | trim : "," }}</button>
+          </td>
+        </tr>
+      </ng-container>
+    </ng-container>
+    <ng-template #noResults>
+      <tr>
+        <td>
+          <p>No results found</p>
+        </td>
+      </tr>
+    </ng-template>
   </tbody>
 </table>
