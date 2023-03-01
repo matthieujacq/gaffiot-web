@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs';
+import { map, tap } from 'rxjs';
 import { DataService } from '../data.service';
 
 @Component({
@@ -14,5 +14,13 @@ export class DefinitionCardComponent {
   );
   private data = inject(DataService).data;
 
-  definition$ = this.wordId.pipe(map((id) => this.data[id]));
+  definition$ = this.wordId.pipe(
+    map((id) => this.data[id]),
+    tap((definition) => {
+      definition.french = definition.french.replace(
+        /\\(\w+)\{([^}]+)}/g,
+        '<$1>$2</$1>'
+      );
+    })
+  );
 }

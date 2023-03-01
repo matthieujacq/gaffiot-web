@@ -9,6 +9,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { DefinitionCardComponent } from './definition-card/definition-card.component';
+import { SanitizeHTMLPipe } from './sanitize-html.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DefinitionCardComponent } from './definition-card/definition-card.compo
     SearchbarComponent,
     SearchPageComponent,
     DefinitionCardComponent,
+    SanitizeHTMLPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
