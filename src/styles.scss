@@ -14,6 +14,16 @@
     font-style: italic;
   }
 
+  rub {
+    &::before {
+      content: "\A\A "; // \A is a new-line
+    }
+    color: green;
+    white-space: pre; // meeded so to insert the new-line before
+    font-weight: bold;
+  }
+
+  // P1, P2, etc.
   pp {
     &::before {
       content: "\A\A¶ "; // \A is a new-line
@@ -23,6 +33,7 @@
     font-weight: bold;
   }
 
+  // a), b), c), etc.
   qq {
     &::before {
       content: "\A\A        "; // \A is a new-line
@@ -36,5 +47,33 @@
     position: relative;
     bottom: 1ex;
     font-size: 80%;
+  }
+
+  .comment {
+    color: #777;
+    &::before {
+      content: "[";
+    }
+    &::after {
+      content: "]";
+    }
+  }
+
+  aut,
+  oeuv,
+  refch {
+    font-style: italic;
+    color: #777;
+  }
+
+  .main-def {
+    color: navy;
+    font-weight: bold;
+  }
+
+  cl,
+  lat {
+    color: brown;
+    font-style: italic;
   }
 }
