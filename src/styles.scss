@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+}
+
+// styles for the sanitzed html
+.definition-card {
+  .entry {
+    font-weight: bold;
+  }
+
+  des {
+    font-style: italic;
+  }
+
+  pp {
+    &::before {
+      content: "\A\A¶ "; // \A is a new-line
+    }
+    color: red;
+    white-space: pre; // meeded so to insert the new-line before
+    font-weight: bold;
+  }
+
+  qq {
+    &::before {
+      content: "\A\A        "; // \A is a new-line
+    }
+    color: blue;
+    white-space: pre; // meeded so to insert the new-line before
+    font-weight: bold;
+  }
+
+  up {
+    position: relative;
+    bottom: 1ex;
+    font-size: 80%;
+  }
+}

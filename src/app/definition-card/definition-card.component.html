@@ -1,5 +1,5 @@
 <button class="back" routerLink="/">Search</button>
-<ng-container *ngIf="definition$ | async as definition">
-  <h2>{{ definition.latin | trim : "," }}</h2>
-  <div [innerHTML]="definition.french | sanitize"></div>
-</ng-container>
+<div class="definition-card" *ngIf="definition$ | async as definition">
+  <span class="entry">{{ definition.latin }}</span>
+  <span class="definition" [innerHTML]="definition.french | sanitize"></span>
+</div>
