@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Deploy
 
-Deploy on github pages with `ng deploy`, we currently use the custom domain [gaffiot.codeofsteel.com](gaffiot.codeofsteel.com) using [angular-cli-ghpages](angular-schule/angular-cli-ghpages). See [instructions](https://angular.schule/blog/2020-01-everything-github).
+Deploy on github pages with `ng deploy`, we currently use the custom domain [gaffiot.codeofsteel.com](https://gaffiot.codeofsteel.com) using [angular-cli-ghpages](https://angular-schule/angular-cli-ghpages). See [instructions](https://angular.schule/blog/2020-01-everything-github).
 
 ## Development server
 
