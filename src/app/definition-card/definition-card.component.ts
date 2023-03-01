@@ -24,15 +24,15 @@ export class DefinitionCardComponent {
       );
       // remove remaining \tag
       definition.french = definition.french.replace(/\\(\w+)/g, '');
+      // enclose text between </pp> and : or [
+      definition.french = definition.french.replace(
+        /(<\/(?:pp|rub)> *)(\[.*] *)?([^:\[<]+)/g,
+        "$1$2<span class='main-def'>$3</span>"
+      );
       // enclose text between brackets in <i>...</i>
       definition.french = definition.french.replace(
         /\[([^\]]+)\]/g,
         '<span class="comment">$1</span>'
-      );
-      // enclose text between </pp> and : or [
-      definition.french = definition.french.replace(
-        /<\/pp>([^:\[<]+)/g,
-        "</pp><span class='main-def'>$1</span>"
       );
     })
   );
