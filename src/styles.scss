@@ -6,7 +6,10 @@
   font-family: var(--font-family);
   --text-color: #143b5a;
   --primary-color: #0080ff;
-  --primary-color-light: #e6f2ff;
+  --primary-color-light: #80bfff;
+  --primary-color-lighter: #e6f2ff;
+  --primary-color-dark: #004080;
+  --secondary-color: #653a11;
   color: var(--text-color);
 }
 
@@ -87,7 +90,7 @@ body {
   cl,
   lat,
   latv {
-    color: #653a11;
+    color: var(--secondary-color);
     font-style: italic;
   }
 
@@ -96,7 +99,8 @@ body {
     border-radius: 5px;
     margin: 2em clamp(0em, calc(7% - 1em), 2em);
     margin-bottom: 0;
-    box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 0 3px #ddd;
+    border-top: 3px solid var(--primary-color-light);
     text-align: justify;
     text-justify: inter-word;
   }
