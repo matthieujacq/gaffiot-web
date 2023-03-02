@@ -94,7 +94,8 @@ body {
   .definition-pp {
     padding: 1em;
     border-radius: 5px;
-    margin: 1.5em 2em;
+    margin: 2em clamp(0em, calc(7% - 1em), 2em);
+    margin-bottom: 0;
     box-shadow: 0 0 5px #ddd;
     text-align: justify;
     text-justify: inter-word;
