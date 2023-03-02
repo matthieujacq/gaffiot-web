@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, ElementRef, inject, Input, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Entry } from '../data.service';
 import { StateService } from '../state.service';
@@ -8,8 +8,13 @@ import { StateService } from '../state.service';
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss'],
 })
-export class SearchbarComponent {
+export class SearchbarComponent implements OnInit {
   private _data: Entry[] = [];
+  private elRef = inject(ElementRef);
+
+  ngOnInit() {
+    this.elRef.nativeElement.querySelector('input').focus();
+  }
 
   @Input() set data(value: Entry[]) {
     this._data = value;
