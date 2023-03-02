@@ -134,3 +134,10 @@ a {
     text-decoration: underline;
   }
 }
+
+input {
+  color: var(--text-color);
+  &::placeholder {
+    color: #999;
+  }
+}
