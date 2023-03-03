@@ -31,7 +31,7 @@ export class SearchbarComponent implements OnInit {
   search() {
     this.state.query = this.query;
     const filteredData = this._data.filter((entry) =>
-      entry.latin_raw.startsWith(this.query)
+      entry.latin_raw.startsWith(this.query, entry.latin_raw.search(/[^0-9 ]/))
     );
     this.filteredData.next(filteredData);
   }
